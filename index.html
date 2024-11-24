@@ -10,13 +10,17 @@
   <link rel="stylesheet" href="icon/bootstrap-icons.min.css">
   <!-- ==========================ICON==========================  -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- ==========================Swiper Slider ==========================  -->
+
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/slider.css">
 </head>
 
 <body>
 
   <div id="progress">
     <span id="progress-value">
-      &#x1F815;
+      <i class="bi bi-arrow-up"></i>
     </span>
   </div>
 
@@ -65,8 +69,8 @@
 
   <!-- ==========================NAVBAR========================== -->
 
-  <!-- ==========================SLIDER========================== -->
-  <div id="carouselExampleDark" class="carousel carousel-dark slide">
+  <!-- ==========================SLIDER start========================== -->
+  <!-- <div id="carouselExampleDark" class="carousel carousel-dark slide">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
         aria-current="true" aria-label="Slide 1"></button>
@@ -105,8 +109,47 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
-  </div>
-  <!-- ==========================SLIDER========================== -->
+  </div> -->
+ 
+  <section class="main swiper mySwiper">
+    <div class="wrapper swiper-wrapper">
+        <div class="slide swiper-slide">
+            <img src="images/slider-photo11.jpg" alt="" class="image">
+            <div class="image-data">
+                <span class="text">Title one</span>
+                <h2>Lorem ipsum dolor sit amet consectetur.<br /> Recusandae, suscipit.</h2>
+                <a href="about-us.html" class="button">About Us</a>
+            </div>
+        </div>
+
+
+        <div class="slide swiper-slide">
+            <img src="images/slider-photo-22.jpg" alt="" class="image">
+            <div class="image-data">
+                <span class="text">Title one</span>
+                <h2>Lorem ipsum dolor sit amet consectetur.<br /> Recusandae, suscipit.</h2>
+                <a href="about-us.html" class="button">About Us</a>
+            </div>
+        </div>
+
+
+
+        <div class="slide swiper-slide">
+            <img src="images/slider-photo-33.jpg" alt="" class="image">
+            <div class="image-data">
+                <span class="text">Title one</span>
+                <h2>Lorem ipsum dolor sit amet consectetur.<br /> Recusandae, suscipit.</h2>
+                <a href="about-us.html" class="button">About Us</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="swiper-button-next nav-btn"></div>
+    <div class="swiper-button-prev nav-btn"></div>
+    <div class="swiper-pagination"></div>
+</section>
+  <!-- ==========================SLIDER end========================== -->
+  <div class="clear"></div>
   <div class="container">
     <!-- ==========================ABOUT US========================== -->
     <div class="row mb-xl-5 mt-5 about-us">
@@ -366,6 +409,27 @@
   <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="js/form.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- ==========================Swiper Slider========================== -->
+
+  <script src="js/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+
+<script>
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+</script>
 
 </body>
 
